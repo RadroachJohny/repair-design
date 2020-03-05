@@ -420,12 +420,13 @@ template {
   background: #131313 url("../../img/hero_bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #ffffff;
-  padding-top: 100px;
+  padding-top: 90px;
 }
 
 .hero__instagram {
   position: absolute;
   left: 0;
+  top: 0;
   max-width: 80px;
   height: 100%;
 }
@@ -453,6 +454,11 @@ template {
 
 .title {
   margin: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
