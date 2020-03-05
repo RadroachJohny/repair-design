@@ -18,6 +18,7 @@
   "homepage": "https://github.com/RadroachJohny/repair-design#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.2.0",
     "gulp-minify-css": "^1.2.4",
     "gulp-sass": "^4.0.2"
