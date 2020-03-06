@@ -26,7 +26,7 @@ return src("./sass/**/*.sass", "./sass/**/*.scss")
     .pipe(autoprefixer({
       cascade: false
     }))
-    .pipe(dest("/css"))
+    .pipe(dest("./css"))
     .pipe(browserSync.stream());
 }
 
