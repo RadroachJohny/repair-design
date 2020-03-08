@@ -16,7 +16,7 @@ function bs() {
   watch("./*.html").on('change', browserSync.reload);
   watch("./sass/**/*.sass", serveSass);
   watch("./sass/**/*.scss", serveSass);
-  watch("./js/*.html").on('change', browserSync.reload);
+  watch("./js/*.js").on('change', browserSync.reload);
 }
 
 
@@ -30,7 +30,17 @@ return src("./sass/**/*.sass", "./sass/**/*.scss")
     .pipe(browserSync.stream());
 }
 
+function minifyCSS() {
+  return src('sass/css/*.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(rename({suffix: ".min"}))
+    .pipe(dest('css/'));
+}
+
+
 exports.serve = bs;
+exports.minify = minifyCSS;
+
 
 // gulp.task('minify-css', () => {
 //   return gulp.src('styles/*.css')
@@ -38,4 +48,3 @@ exports.serve = bs;
 //     .pipe(rename({suffix: ".min"}))
 //     .pipe(gulp.dest('dist/css/'));
 // });
-
