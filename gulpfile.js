@@ -34,7 +34,7 @@ function minifyCSS() {
   return src('sass/css/*.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(rename({suffix: ".min"}))
-    .pipe(dest('css/'));
+    .pipe(dest('./css/'));
 }
 
 
