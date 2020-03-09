@@ -357,6 +357,46 @@ template {
   font-display: wrap;
 }
 
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: 'Futura Book';
+  font-size: 1rem;
+}
+
+.section-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Yeseva One", cursive;
+}
+
+.section-title__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-title__image::before, .section-title__image::after {
+  content: "";
+  width: 32px;
+  height: 2px;
+  margin: 0 10px;
+  background-color: #E3B873;
+}
+
 .header {
   position: fixed;
   left: 0;
@@ -588,6 +628,7 @@ template {
   margin: 0;
   margin-bottom: 0.5rem;
   font-family: 'Yeseva One', cursive;
+  font-weight: 400;
   text-transform: uppercase;
   font-size: 2.857rem;
   line-height: 1.34;
@@ -595,46 +636,6 @@ template {
 
 .title--primary {
   color: #E3B873;
-}
-
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-html {
-  font-size: 14px;
-}
-
-body {
-  font-family: 'Futura Book';
-  font-size: 1rem;
-}
-
-.section-title {
-  text-align: center;
-  text-transform: uppercase;
-  font-family: "Yeseva One", cursive;
-}
-
-.section-title__image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.section-title__image::before, .section-title__image::after {
-  content: "";
-  width: 32px;
-  height: 2px;
-  margin: 0 10px;
-  background-color: #E3B873;
 }
 
 @media screen and (max-width: 1200px) {
