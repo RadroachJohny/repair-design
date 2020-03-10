@@ -328,20 +328,25 @@ body {
   font-family: 'Futura Book';
   font-size: 1rem; }
 
-.section-title {
-  text-align: center;
-  text-transform: uppercase;
-  font-family: "Yeseva One", cursive; }
-  .section-title__image {
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-    .section-title__image::before, .section-title__image::after {
-      content: "";
-      width: 32px;
-      height: 2px;
-      margin: 0 10px;
-      background-color: #E3B873; }
+img {
+  max-width: 100%; }
+
+.section {
+  padding: 60px 0; }
+  .section-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Yeseva One", cursive; }
+    .section-title__image {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .section-title__image::before, .section-title__image::after {
+        content: "";
+        width: 32px;
+        height: 2px;
+        margin: 0 10px;
+        background-color: #E3B873; }
 
 .header {
   position: fixed;
@@ -481,13 +486,13 @@ body {
     display: flex;
     align-items: center;
     line-height: 0.8;
-    font-size: 1.1rem; }
+    font-size: 1rem; }
     .instagram__link::after {
       content: "";
       width: 50px;
       height: 2px;
       background-color: #E3B873;
-      margin-left: 8px; }
+      margin-left: 14px; }
 
 .title {
   margin: 0;
@@ -499,6 +504,39 @@ body {
   line-height: 1.34; }
   .title--primary {
     color: #E3B873; }
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.col {
+  flex-basis: 32%; }
+
+.card__text {
+  position: relative;
+  max-width: 23.6rem;
+  margin: 0 auto;
+  margin-top: -8rem;
+  padding: 1.79rem 2.14rem;
+  background-color: #fff;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
+
+.card__title {
+  font-family: "Yeseva One", cursive;
+  font-weight: normal;
+  font-size: 1.285rem; }
+
+.card__list {
+  padding: 0 0 0 1rem;
+  margin: 0;
+  font-size: 1.071rem;
+  line-height: 1.785;
+  color: #959595; }
+
+.card__pricetag {
+  font-family: "Yeseva One", cursive;
+  font-size: 1.29rem; }
 
 @media screen and (max-width: 1290px) {
   html {
