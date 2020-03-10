@@ -639,7 +639,7 @@ body {
   color: #E3B873;
 }
 
-@media screen and (max-width: 1270px) {
+@media screen and (max-width: 1290px) {
   html {
     font-size: 12px;
   }
@@ -651,7 +651,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1015px) {
+@media screen and (max-width: 1035px) {
   .nav {
     display: none;
   }

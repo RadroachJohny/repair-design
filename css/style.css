@@ -500,7 +500,7 @@ body {
   .title--primary {
     color: #E3B873; }
 
-@media screen and (max-width: 1270px) {
+@media screen and (max-width: 1290px) {
   html {
     font-size: 12px; }
   .contacts__phone {
@@ -508,7 +508,7 @@ body {
   .header .nav__item {
     margin-right: 2rem; } }
 
-@media screen and (max-width: 1015px) {
+@media screen and (max-width: 1035px) {
   .nav {
     display: none; }
   .hero__instagram {
