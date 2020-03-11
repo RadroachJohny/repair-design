@@ -785,6 +785,8 @@ img {
     max-width: 100%; } }
 
 .modal {
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   top: 0;
   right: 0;
@@ -797,6 +799,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: center; }
+  .modal--visible {
+    opacity: 1;
+    visibility: visible; }
   .modal__dialog {
     position: relative;
     max-width: 36.36rem;
