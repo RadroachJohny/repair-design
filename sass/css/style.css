@@ -1129,6 +1129,7 @@ img {
     padding: 1.014rem 3.55rem 1.014rem 3.85rem;
   }
   .projects .container .projects__pricetag__3 {
+    bottom: -0.75rem;
     padding: 0.95rem 3.7rem 0.95rem 3.7rem;
   }
   .projects .container .projects__list {
