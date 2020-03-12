@@ -648,6 +648,8 @@ img {
 
 .projects {
   padding: 160px 0; }
+  .projects .mobile__visible {
+    display: none; }
   .projects__title__1 {
     margin-left: 0.5rem;
     margin-top: -0.2rem; }
@@ -780,6 +782,10 @@ img {
     margin-left: 0; } }
 
 @media screen and (max-width: 760px) {
+  .projects .mobile__visible {
+    display: inline-block; }
+  .projects .mobile__hidden {
+    display: none; }
   .row {
     flex-direction: column;
     align-items: center; }
