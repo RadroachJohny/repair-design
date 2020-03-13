@@ -845,6 +845,54 @@ img {
       flex-basis: 32%;
 }
 
+#button {
+  display: inline-block;
+  background-color: #E3B873;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  margin: 30px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  -webkit-transition: background-color .3s, opacity .5s, visibility .5s;
+  transition: background-color .3s, opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+#button::hover {
+  cursor: pointer;
+  background-color: #333333;
+}
+
+#button::active {
+  background-color: #555;
+}
+
+#button::after {
+  content: "\f077";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #ffffff;
+}
+
+#button.show {
+  visibility: visible;
+  opacity: 1;
+}
+
 .projects {
   padding: 160px 0;
 }

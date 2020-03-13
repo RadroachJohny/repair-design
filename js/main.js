@@ -1,29 +1,62 @@
-document.addEventListener('DOMContentLoaded', function(event) { 
-  const modal = document.querySelector('.modal');
-  const modalBtn = document.querySelectorAll('[data-toggle=modal]');
-  const closeBtn = document.querySelector('.modal__close');
-  const switchModal = () => {
-    modal.classList.toggle('modal--visible');
-  };
+// document.addEventListener('DOMContentLoaded', function(event) { 
+//   const modal = document.querySelector('.modal');
+//   const modalBtn = document.querySelectorAll('[data-toggle=modal]');
+//   const closeBtn = document.querySelector('.modal__close');
+//   const switchModal = () => {
+//     modal.classList.toggle('modal--visible');
+//   };
   
-  modalBtn.forEach(element => {
-    element.addEventListener('click', switchModal);
+//   modalBtn.forEach(element => {
+//     element.addEventListener('click', switchModal);
+//   });
+
+//   closeBtn.addEventListener('click', switchModal);
+
+//     window.addEventListener('keydown', function (event) {
+//       if (event.key === 'Escape') {
+//         modal.classList.remove('modal--visible');
+//       }
+//     });
+
+//     window.onclick = function(event) {
+//       if (event.target == modal) {
+//         modal.classList.toggle('modal--visible');
+//       }
+//     };
+// });
+
+$(document).ready(function () {
+  var modal = $('.modal'),
+      modalBtn = $('[data-toggle=modal]'),
+      closeBtn = $('.modal__close');
+
+  modalBtn.on('click', function () {
+    modal.toggleClass('modal--visible');
+  });
+  closeBtn.on('click', function () {
+    modal.toggleClass('modal--visible');
+  });
+});
+
+jQuery(document).ready(function() {
+var btn = $('#button');
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 800) {
+      btn.addClass('show');
+    } else {
+      btn.removeClass('show');
+    }
   });
 
-  closeBtn.addEventListener('click', switchModal);
+  btn.on('click', function(e) {
+    e.preventDefault();
+  $('html, body').animate({scrollTop:0}, 800);
+  });
 
-    window.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') {
-        modal.classList.remove('modal--visible');
-      }
-    });
+  });
 
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.classList.toggle('modal--visible');
-      }
-    };
-});
+
 
 
 
