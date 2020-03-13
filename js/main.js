@@ -36,7 +36,36 @@ $(document).ready(function () {
   closeBtn.on('click', function () {
     modal.toggleClass('modal--visible');
   });
+
+  jQuery(document).keyup(function(ev){
+    if(ev.keyCode == 27) {
+      modal.close();
+    }
+  });
+
+  var mySwiper = new Swiper ('.swiper-container', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }, 
+  })
+
+  var next = $('.swiper-button-next');
+  var prev = $('.swiper-button-prev');
+  var bullets = $('.swiper-pagination');
+
+  bullets.css('left', prev.width() + 10)
+  next.css('left', prev.width() + 10 + bullets.width() + 10 )
+
 });
+
+
+
 
 jQuery(document).ready(function() {
 var btn = $('#button');
@@ -51,9 +80,8 @@ var btn = $('#button');
 
   btn.on('click', function(e) {
     e.preventDefault();
-  $('html, body').animate({scrollTop:0}, 800);
-  });
-
+    $('html, body').animate({scrollTop:0}, 800);
+    });
   });
 
 
