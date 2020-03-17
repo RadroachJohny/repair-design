@@ -2,21 +2,39 @@
   display: none 
   width: 100%
 .swiper  
+  &__text
+   margin: 0.1rem
+  &__after
+    &-image
+      
+      & .desktopimage
+        width: 679px
+        max-height: 482px
+        
   &__heading
     margin-top: 0
   &-pagination
     bottom: 0px
     &-bullet
-      margin: 0 8px
-  &-slide
+      margin: 0 9px !important
+      width: 10px
+      height: 10px
+  &-slide   
     display: flex
     flex-wrap: wrap
-    padding-bottom: 3rem
+    padding-bottom: 3rem    
     &__text
-      flex-basis: 50%
-      margin-bottom: 2.42rem
+      flex-basis: 44%
+      margin-bottom: 2.82rem   
+       
+      &__wrapper
+        width: 75%
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
     &__value
       display: block
+      font-size: 1.05rem
     &__heading
       font-family: 'Yeseva One', cursive
       font-weight: normal
@@ -29,11 +47,11 @@
   &-pagination
     &-bullet
       background-color: rgba($light, 0.3)
+     
       &-active
         background-color: $light
   &-button
     &-prev, &-next
-      // background-size: 42px
       width: 42px
       height: 14px
       bottom: 0
@@ -50,7 +68,10 @@
   width: auto
   bottom: -1px
 
-  
+.col-text
+  width: 45%
+.col-image
+  width: 54%
 
-
-    
+  .s2
+    max-width: 679px

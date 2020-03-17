@@ -53,9 +53,7 @@ $(document).ready(function () {
 
   
 
-  
 
-  
   var mySwiper = new Swiper ('.s1', {
     loop: true,
     pagination: {
@@ -74,8 +72,8 @@ $(document).ready(function () {
   var bullets = $('.swiper-pagination');
 
   
-  bullets.css('left', prev.width() + 10 );
-  next.css('left', prev.width() + 10 + bullets.width() + 10 );
+  bullets.css('left', prev.width() + 20 );
+  next.css('left', prev.width() + 20 + bullets.width() + 20 );
  
 
   var yourSwiper = new Swiper ('.s2', {
@@ -97,8 +95,8 @@ $(document).ready(function () {
   var sp = $('.sp');
 
   
-  bullets.css('left', bp.width() + 10 );
-  bn.css('left', bp.width() + 10 + sp.width() + 10 );
+  bullets.css('left', bp.width() + 20 );
+  bn.css('left', bp.width() + 20 + sp.width() + 20 );
 
   
   
