@@ -19,22 +19,40 @@
       margin-left: 0
 
 @media screen and ( max-width: 760px )
+  .col
+    &-image
+      padding-top: 35px  
+    &-slide
+      padding-bottom: 0
+    &-text
+      margin-top: 2.35rem
+      padding-bottom: 3.14rem
+  .row
+    flex-direction: column
+    align-items: center    
+    .card
+      &__text
+        margin-left: 0
+  .section
+    &-title
+      &__word
+        &::after
+          display: none
   .projects
+    .col-50
+      width: 100% 
+    &__row
+      flex-direction: column
     .mobile
       &__visible
         display: inline-block
       &__hidden
         display: none
-  .row
-    flex-direction: column
-    align-items: center
-    .card
-      &__text
-        margin-left: 0
   .types
     &__card
       margin-bottom: 5.65rem
-  
+
+
 
 @media screen and ( max-height: 593px )
   .hero
@@ -42,17 +60,16 @@
       display: none
   
   
-
 @media screen and ( max-width: 570px )
-  .col-50
-    width: 100% 
-  .projects
-    &__row
-      flex-direction: column-reverse
+  .desktopimage
+    display: none
+  .mobi
+    display: inline-block
+  
+  .projects    
     .container
       width: 93%
       .projects
-        
         &__card
           margin-left: 0.3rem
           margin-right: 0.2rem
@@ -111,8 +128,7 @@
     width: 91%
     .title
       &__1
-        margin-left: 0.3rem
-  
+        margin-left: 0.3rem  
   .card
     &__list
       line-height: 1.75
@@ -157,10 +173,7 @@
       &__2
         padding-left: 1.4rem
       &__3
-        padding-left: 1.6rem
-        
-      
-     
+        padding-left: 1.6rem     
 
     &__pricetag
       padding: 0.95rem 3.95rem
@@ -175,7 +188,6 @@
       &__3
         padding: 0.95rem 2.3rem
         bottom: -0.68rem
-
   .header
     padding: 21.5px 0
     .contacts
@@ -220,13 +232,13 @@
         margin-bottom: 3.3rem
 
 
-
-
 @media screen and ( max-width: 400px )
   .hero
     &__content
       max-width: 100%
-  
-
-
+  .desktopimage
+    display: none
+  .mobi
+    display: block
+    margin: auto
   

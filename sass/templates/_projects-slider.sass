@@ -1,8 +1,17 @@
-.swiper
+.mobi
+  display: none 
+  width: 100%
+.swiper  
+  &__heading
+    margin-top: 0
+  &-pagination
+    bottom: 0px
+    &-bullet
+      margin: 0 8px
   &-slide
     display: flex
     flex-wrap: wrap
-    padding-bottom: 6.57rem
+    padding-bottom: 3rem
     &__text
       flex-basis: 50%
       margin-bottom: 2.42rem
@@ -34,12 +43,14 @@
     &-prev
       background: url('../../img/arrow-prev.svg') no-repeat center
       left: 0
-      
     &-next
       background: url('../../img/arrow-next.svg') no-repeat center
-
 
 .swiper-container-horizontal>.swiper-pagination-bullets
   width: auto
   bottom: -1px
+
+  
+
+
     

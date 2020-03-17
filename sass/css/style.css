@@ -923,13 +923,30 @@ img {
   color: #E3B873;
 }
 
+.mobi {
+  display: none;
+  width: 100%;
+}
+
+.swiper__heading {
+  margin-top: 0;
+}
+
+.swiper-pagination {
+  bottom: 0px;
+}
+
+.swiper-pagination-bullet {
+  margin: 0 8px;
+}
+
 .swiper-slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-bottom: 6.57rem;
+  padding-bottom: 3rem;
 }
 
 .swiper-slide__text {
@@ -1215,6 +1232,139 @@ img {
   font-weight: normal;
 }
 
+.goals__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.goals__col__text {
+  width: 40%;
+}
+
+.goals__col__image {
+  width: 60%;
+  margin-top: -30px;
+}
+
+.goals__col__swiper__text {
+  margin-bottom: 2.42rem;
+}
+
+.goals-title__word::after {
+  margin-left: 4rem;
+}
+
+.goals__text__heading {
+  max-width: 18.71rem;
+}
+
+.goals__text__value {
+  font-size: 1.07rem;
+  line-height: 1.78rem;
+  font-weight: normal;
+}
+
+.goals__text__value__2 {
+  margin-bottom: 0;
+}
+
+.swiper-slide {
+  padding-bottom: 4.42rem;
+}
+
+.swiper-slide__description {
+  max-width: 24.07rem;
+}
+
+.swiper-counter {
+  position: relative;
+  bottom: 10px;
+  right: 10px;
+  z-index: 99999;
+  font-size: 30px;
+  color: #fff;
+}
+
+.swiper-counter span {
+  position: relative;
+  bottom: 10px;
+  right: 10px;
+  z-index: 99999;
+  font-size: 30px;
+  color: #fff;
+}
+
+.swiper-counter .next, .swiper-counter .count {
+  position: absolute;
+}
+
+.swiper-counter .next {
+  right: 10px;
+}
+
+.slider__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.slider__name {
+  width: 33%;
+  margin: 0;
+  margin-bottom: 2.57rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.slider__name:last-child {
+  margin-bottom: 3.07rem;
+}
+
+.slider__name__active {
+  color: #ffffff;
+}
+
+.name__description {
+  max-width: 9.57rem;
+  margin: 0;
+  font-size: 1.07rem;
+  line-height: 1.28rem;
+  font-weight: normal;
+  display: block;
+}
+
+.name__number {
+  font-family: "Yeseva One";
+  position: relative;
+  display: inline-block;
+  font-size: 1.07rem;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 1.21rem;
+}
+
+.name__number::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(227, 184, 115, 0.5);
+}
+
+.name__number__active::after {
+  background-color: #E3B873;
+}
+
 @media screen and (max-width: 1290px) {
   html {
     font-size: 12px;
@@ -1240,11 +1390,15 @@ img {
 }
 
 @media screen and (max-width: 760px) {
-  .projects .mobile__visible {
-    display: inline-block;
+  .col-image {
+    padding-top: 35px;
   }
-  .projects .mobile__hidden {
-    display: none;
+  .col-slide {
+    padding-bottom: 0;
+  }
+  .col-text {
+    margin-top: 2.35rem;
+    padding-bottom: 3.14rem;
   }
   .row {
     -webkit-box-orient: vertical;
@@ -1258,6 +1412,24 @@ img {
   .row .card__text {
     margin-left: 0;
   }
+  .section-title__word::after {
+    display: none;
+  }
+  .projects .col-50 {
+    width: 100%;
+  }
+  .projects__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects .mobile__visible {
+    display: inline-block;
+  }
+  .projects .mobile__hidden {
+    display: none;
+  }
   .types__card {
     margin-bottom: 5.65rem;
   }
@@ -1270,14 +1442,11 @@ img {
 }
 
 @media screen and (max-width: 570px) {
-  .col-50 {
-    width: 100%;
+  .desktopimage {
+    display: none;
   }
-  .projects__row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+  .mobi {
+    display: inline-block;
   }
   .projects .container {
     width: 93%;
@@ -1474,6 +1643,13 @@ img {
 @media screen and (max-width: 400px) {
   .hero__content {
     max-width: 100%;
+  }
+  .desktopimage {
+    display: none;
+  }
+  .mobi {
+    display: block;
+    margin: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

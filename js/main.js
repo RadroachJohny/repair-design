@@ -12,13 +12,13 @@
 
 //   closeBtn.addEventListener('click', switchModal);
 
-//     window.addEventListener('keydown', function (event) {
+//     document.addEventListener('keydown', function (event) {
 //       if (event.key === 'Escape') {
 //         modal.classList.remove('modal--visible');
 //       }
 //     });
 
-//     window.onclick = function(event) {
+//     document.onclick = function(event) {
 //       if (event.target == modal) {
 //         modal.classList.toggle('modal--visible');
 //       }
@@ -37,32 +37,108 @@ $(document).ready(function () {
     modal.toggleClass('modal--visible');
   });
 
-  jQuery(document).keyup(function(ev){
-    if(ev.keyCode == 27) {
-      modal.close();
+   jQuery(document).keyup(function(ev){
+    if (ev.keyCode == 27) {
+      modal.removeClass('modal--visible');
     }
   });
 
-  var mySwiper = new Swiper ('.swiper-container', {
+  
+  $('.modal').click(function (e) {
+    modal.removeClass('modal--visible');
+ });
+  $(".modal__dialog").click(function(e){
+    e.stopPropagation();
+  });
+
+  
+
+  
+
+  
+  var mySwiper = new Swiper ('.s1', {
     loop: true,
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
+      clickable: true,
     },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     }, 
-  })
+  });
 
   var next = $('.swiper-button-next');
   var prev = $('.swiper-button-prev');
   var bullets = $('.swiper-pagination');
 
-  bullets.css('left', prev.width() + 10)
-  next.css('left', prev.width() + 10 + bullets.width() + 10 )
+  
+  bullets.css('left', prev.width() + 10 );
+  next.css('left', prev.width() + 10 + bullets.width() + 10 );
+ 
 
+  var yourSwiper = new Swiper ('.s2', {
+   
+    loop: true,
+    pagination: {
+      el: '.sp',
+      type: 'bullets',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.bn',
+      prevEl: '.bp',
+    }, 
+  });
+
+  var bn = $('.bn');
+  var bp = $('.bp');
+  var sp = $('.sp');
+
+  
+  bullets.css('left', bp.width() + 10 );
+  bn.css('left', bp.width() + 10 + sp.width() + 10 );
+
+  
+  
+//   var counter = $('.swiper-counter');
+//   var currentCount = $('<span class="count">1<span/>');
+//     counter.append(currentCount);
+
+// function photos_change(swiper) {
+//   var index = swiper.activeIndex + 1,
+//       $current = $(".photos-slide").eq(index),
+//       dur = 0.8;
+
+//   var prevCount = $('.count');
+//   currentCount = $('<span class="count next">' + index + '<span/>');
+//   currentCount.appendTo(counter);
+//   TweenLite.to(prevCount, dur, {
+//     y: -12,
+//     opacity: 0,
+//     onCompleteParams: [prevCount],
+//     onComplete: function (prevCount) {
+//       prevCount.remove();
+//     },
+//     ease: Power2.easeOut
+//   });
+//   TweenLite.fromTo(currentCount, dur, {
+//     y: 12,
+//     opacity: 0
+//   }, {
+//     y: 0,
+//     opacity: 1,
+//     ease: Power2.easeOut
+//   });
+// }
+
+
+
+  
 });
+
+
 
 
 
@@ -83,9 +159,5 @@ var btn = $('#button');
     $('html, body').animate({scrollTop:0}, 800);
     });
   });
-
-
-
-
 
 
