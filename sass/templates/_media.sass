@@ -35,27 +35,31 @@
         max-width: 24rem
 
 @media screen and ( max-width: 760px )
-  // .video
-  //   &__play
-  //     width: 340px
-  //     height: 207px
+  .video
+    &__play
+      width: 67px
+      height: 67px
       
   .input
     border-bottom: 1px solid rgba($light, 0.5)
   .control
     background: $dark
     color: $light
+    &__section
+      padding-bottom: 2.2rem
+      position: relative
     &__text
+      position: relative
       font-size: 1.128em
       max-width: 29rem
       line-height: 2rem
-      margin-top: -9.1rem;
-      position: relative;
+      margin-top: -9.1rem
+      margin-bottom: 2.885rem
       &::before
         margin-bottom: 1.1rem
     &__form
       flex-direction: column
-      // align-items: center
+      
       &__input
         width: 100% 
     &__input 
@@ -68,11 +72,15 @@
       font-size: 1.27rem
       margin-bottom: -0.4rem
       color: rgba($light, 0.5)
-    &__button
-      // margin: auto
-      // max-width: 30rem
-      align-self: center
-      padding: 1.514rem 4.428rem
+    &__button  
+      align-self: stretch
+      position: absolute
+      bottom: -4.3rem
+      left: 0
+      right: 0
+      margin-left: auto
+      margin-right: auto      
+      padding: 1.514rem 10.828rem
       font-size: 1.295rem
       order: 4
     &__policy
@@ -85,9 +93,9 @@
       width: 340px
       height: 207px
       background: $dark url('../../img/play-image-mobile.png') center no-repeat
-      & .img
-        width: 37px
-        height: 37px
+      &.img
+        width: 67px
+        height: 7px
 
       
   .section
@@ -275,7 +283,7 @@
   .section
     &-title
       &__heading
-        font-size: 1.85rem
+        font-size: 1.81rem
   .hero
     &__scrolldown
       display: none
@@ -318,8 +326,12 @@
     margin: auto
   .section
     &-title
+      &__image
+        position: relative
+        z-index: 100
+        // margin-bottom: -3.786rem
       &__heading
-        font-size: 1.7rem
+        // font-size: 1.81rem
       &__text
         max-width: 25rem
         font-size: 1.2rem
@@ -337,6 +349,9 @@
         &__wrapper
           width: 100%
   .control
+    &__section
+      &-title
+        margin-bottom: -3.7rem
     &__button
       align-self: stretch
       

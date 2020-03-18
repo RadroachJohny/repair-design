@@ -716,7 +716,15 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 1.14rem;
-  font-weight: 700;
+  font-weight: normal;
+}
+
+.control__input {
+  color: #131313;
+}
+
+.control__input:focus {
+  outline: none;
 }
 
 .control__input__group {
@@ -733,6 +741,7 @@ img {
 
 .control__label {
   margin-bottom: -0.5rem;
+  color: rgba(19, 19, 19, 0.5);
 }
 
 .control__button {
@@ -1615,6 +1624,10 @@ img {
 }
 
 @media screen and (max-width: 760px) {
+  .video__play {
+    width: 67px;
+    height: 67px;
+  }
   .input {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   }
@@ -1622,12 +1635,17 @@ img {
     background: #131313;
     color: #ffffff;
   }
+  .control__section {
+    padding-bottom: 2.2rem;
+    position: relative;
+  }
   .control__text {
+    position: relative;
     font-size: 1.128em;
     max-width: 29rem;
     line-height: 2rem;
     margin-top: -9.1rem;
-    position: relative;
+    margin-bottom: 2.885rem;
   }
   .control__text::before {
     margin-bottom: 1.1rem;
@@ -1666,10 +1684,16 @@ img {
     color: rgba(255, 255, 255, 0.5);
   }
   .control__button {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    padding: 1.514rem 4.428rem;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+    position: absolute;
+    bottom: -4.3rem;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.514rem 10.828rem;
     font-size: 1.295rem;
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
@@ -1692,9 +1716,9 @@ img {
     height: 207px;
     background: #131313 url("../../img/play-image-mobile.png") center no-repeat;
   }
-  .control__video .img {
-    width: 37px;
-    height: 37px;
+  .control__video.img {
+    width: 67px;
+    height: 7px;
   }
   .section-title__text {
     max-width: 30rem;
@@ -1915,7 +1939,7 @@ img {
     display: none;
   }
   .section-title__heading {
-    font-size: 1.85rem;
+    font-size: 1.81rem;
   }
   .hero__scrolldown {
     display: none;
@@ -1960,8 +1984,9 @@ img {
     display: block;
     margin: auto;
   }
-  .section-title__heading {
-    font-size: 1.7rem;
+  .section-title__image {
+    position: relative;
+    z-index: 100;
   }
   .section-title__text {
     max-width: 25rem;
@@ -1983,6 +2008,9 @@ img {
   }
   .swiper-slide__text__wrapper {
     width: 100%;
+  }
+  .control__section-title {
+    margin-bottom: -3.7rem;
   }
   .control__button {
     -ms-flex-item-align: stretch;
