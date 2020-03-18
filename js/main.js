@@ -98,42 +98,30 @@ $(document).ready(function () {
   bullets.css('left', bp.width() + 20 );
   bn.css('left', bp.width() + 20 + sp.width() + 20 );
 
-  
-  
-//   var counter = $('.swiper-counter');
-//   var currentCount = $('<span class="count">1<span/>');
-//     counter.append(currentCount);
-
-// function photos_change(swiper) {
-//   var index = swiper.activeIndex + 1,
-//       $current = $(".photos-slide").eq(index),
-//       dur = 0.8;
-
-//   var prevCount = $('.count');
-//   currentCount = $('<span class="count next">' + index + '<span/>');
-//   currentCount.appendTo(counter);
-//   TweenLite.to(prevCount, dur, {
-//     y: -12,
-//     opacity: 0,
-//     onCompleteParams: [prevCount],
-//     onComplete: function (prevCount) {
-//       prevCount.remove();
-//     },
-//     ease: Power2.easeOut
-//   });
-//   TweenLite.fromTo(currentCount, dur, {
-//     y: 12,
-//     opacity: 0
-//   }, {
-//     y: 0,
-//     opacity: 1,
-//     ease: Power2.easeOut
-//   });
-// }
+  new WOW().init();
 
 
+ 
 
   
+});
+
+var $window = $(window);
+var $elem = $(".control__text");
+
+function isScrolledIntoView($elem, $window) {
+    var docViewTop = $window.scrollTop();
+    var docViewBottom = docViewTop + $window.height();
+
+    var elemTop = $elem.offset().top;
+    var elemBottom = elemTop + $elem.height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+$(document).on("scroll", function () {
+    if (isScrolledIntoView($elem, $window)) {
+        $elem.addClass("animate");
+    }
 });
 
 
