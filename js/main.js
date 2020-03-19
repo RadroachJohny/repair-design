@@ -121,7 +121,7 @@ $(document).ready(function () {
       email: true
     }
   }, /* сообщения */
-  errorElement: "em",
+  errorElement: "div",
   messages: {
     userName: {
     required: "Заполните поле",
@@ -147,10 +147,9 @@ $(document).ready(function () {
    rules: {
      // строчное правило
      userName: {required: true, minlength: 2, maxlength: 15},
-     userPhone: {required: true, minlength: 17},
-     userQuestion: {required: true, minlength: 15}
+     userPhone: {required: true, minlength: 17}
    }, /* сообщения */
-   errorElement: "em",
+   errorElement: "div",
    messages: {
      userName: {
      required: "Заполните поле",
@@ -160,10 +159,7 @@ $(document).ready(function () {
      userPhone: {
      required: "Заполните поле",
      minlength: "Длина номера 11 цифр"},
-     userQuestion:{
-       required: "Задайте свой вопрос",
-       minlength: "Вопрос не может быть короче 15 символов"
-     }
+     
     }
    
 });
@@ -177,7 +173,7 @@ $('.control__form').validate({
     userName: {required: true, minlength: 2, maxlength: 15},
     userPhone: {required: true, minlength: 17}
   }, /* сообщения */
-  errorElement: "em",
+  errorElement: "div",
   messages: {
     userName: {
     required: "Заполните поле",

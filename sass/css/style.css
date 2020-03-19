@@ -591,11 +591,27 @@ img {
   outline: none;
 }
 
+.modal__input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.modal__input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.modal__input::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.modal__input::placeholder {
+  color: #ffffff;
+}
+
 .modal__input-group {
   position: relative;
 }
 
-.modal em.invalid {
+.modal div.invalid {
   position: absolute;
   border-bottom: none;
   color: tomato;
@@ -611,11 +627,27 @@ img {
   outline: none;
 }
 
+.footer__input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.footer__input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.footer__input::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.footer__input::placeholder {
+  color: #ffffff;
+}
+
 .footer__input-group {
   position: relative;
 }
 
-.footer em.invalid {
+.footer div.invalid {
   position: absolute;
   border-bottom: none;
   color: tomato;
@@ -628,14 +660,31 @@ img {
 }
 
 .control__input {
+  color: #ffffff;
   outline: none;
+}
+
+.control__input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.control__input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.control__input::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.control__input::placeholder {
+  color: #ffffff;
 }
 
 .control__input__group {
   position: relative;
 }
 
-.control em.invalid {
+.control div.invalid {
   position: absolute;
   border-bottom: none;
   color: tomato;
@@ -2021,7 +2070,10 @@ img {
   .control__form__input {
     width: 100%;
   }
-  .control__input__name {
+  .control__input {
+    color: #ffffff;
+  }
+  .control__input__group:first-of-type {
     margin-bottom: 5.2rem;
   }
   .control__input::-webkit-input-placeholder {

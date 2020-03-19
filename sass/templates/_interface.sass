@@ -58,9 +58,11 @@
 .modal
   &__input
     outline: none
+    &::placeholder
+      color: #ffffff
     &-group
       position: relative
-  em.invalid
+  div.invalid
     position: absolute
     border-bottom: none
     color: tomato
@@ -72,9 +74,11 @@
 .footer
   &__input
     outline: none
+    &::placeholder
+      color: #ffffff
     &-group
       position: relative
-  em.invalid
+  div.invalid
     position: absolute
     border-bottom: none
     color: tomato
@@ -85,10 +89,13 @@
 
 .control
   &__input
+    color: $light
     outline: none
+    &::placeholder
+      color: #ffffff
     &__group
       position: relative
-  em.invalid
+  div.invalid
     position: absolute
     border-bottom: none
     color: tomato
