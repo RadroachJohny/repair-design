@@ -48,6 +48,8 @@
       max-width: 305px
     &__card
       max-width: 100%
+      &__pricetag
+        width: 100%
     &__control
       &__text
         display: none
@@ -148,6 +150,11 @@
     .card
       &__text
         margin-left: 0
+    .team
+      &__card
+        &__text
+          margin-left: auto
+          margin-right: auto
   .section
     &-title
       &__word
@@ -166,6 +173,11 @@
   .types
     &__card
       margin-bottom: 5.65rem
+  .team
+    &__card
+      &__text
+        margin-left: auto
+        margin-right: auto
 
 
 
@@ -373,6 +385,10 @@
       font-size: 1.34rem
       &--center
         justify-content: flex-start
+  .team
+    & .card
+        &__text
+          max-width: 16.64rem
 
 
 @media screen and ( max-width: 400px )
@@ -447,3 +463,23 @@
         padding: 1.225rem 3.1rem
         font-size: 1.07rem
   
+@media screen and ( max-width: 374px )
+  .control
+    &__video
+      width: 100%
+    &__button
+      max-width: 100%
+  .team
+    &__mobiimg      
+      width: 100%
+    .card
+      &__title
+        font-size: 1.285rem
+      &__text
+        margin-left: auto
+        margin-right: auto
+      &__list
+        font-size: 1.285rem
+      &__pricetag
+        font-size: 0.87rem
+

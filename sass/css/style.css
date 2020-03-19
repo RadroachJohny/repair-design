@@ -2020,6 +2020,9 @@ img {
   .team__card {
     max-width: 100%;
   }
+  .team__card__pricetag {
+    width: 100%;
+  }
   .team__control__text {
     display: none;
   }
@@ -2159,6 +2162,10 @@ img {
   .row .card__text {
     margin-left: 0;
   }
+  .row .team__card__text {
+    margin-left: auto;
+    margin-right: auto;
+  }
   .section-title__word::after {
     display: none;
   }
@@ -2179,6 +2186,10 @@ img {
   }
   .types__card {
     margin-bottom: 5.65rem;
+  }
+  .team__card__text {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -2423,6 +2434,9 @@ img {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+  .team .card__text {
+    max-width: 16.64rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -2500,6 +2514,31 @@ img {
     width: 100%;
     padding: 1.225rem 3.1rem;
     font-size: 1.07rem;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .control__video {
+    width: 100%;
+  }
+  .control__button {
+    max-width: 100%;
+  }
+  .team__mobiimg {
+    width: 100%;
+  }
+  .team .card__title {
+    font-size: 1.285rem;
+  }
+  .team .card__text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .team .card__list {
+    font-size: 1.285rem;
+  }
+  .team .card__pricetag {
+    font-size: 0.87rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
