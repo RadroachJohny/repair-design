@@ -114,7 +114,7 @@ $(document).ready(function () {
   rules: {
     // строчное правило
     userName: {required: true, minlength: 2, maxlength: 15},
-    userPhone: "required",
+    userPhone: {required: true, minlength: 11},
     // правило-объект
     userEmail: {
       required: true,
@@ -128,7 +128,9 @@ $(document).ready(function () {
     minlength: "Имя не короче двух букв",
     maxlength: "Имя не длиннее 15 букв"
     },
-    userPhone: "Заполните поле",
+    userPhone: {
+    required: "Заполните поле",
+    minlength: "Длина номера 11 цифр"},
     userEmail: {
       required: "Обязательно укажите email",
       email: "Введите корректный email"
@@ -139,7 +141,7 @@ $(document).ready(function () {
  });
 
  
-
+//  userPhone: "required",
 
 
 //  Маска для номера телефона
