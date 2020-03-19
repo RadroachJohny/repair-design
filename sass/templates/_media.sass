@@ -4,7 +4,11 @@
   .contacts
     &__phone
       margin-right: 15px
-  .header
+  .footer
+    .contacts
+      &__phone
+        margin-right: 15px
+  .header, .footer
     .nav
       &__item
         margin-right: 2rem 
@@ -28,6 +32,30 @@
     &-title
       &__text
         max-width: 25rem
+  .team
+    background: $dark
+    .row
+      flex-direction: column
+      align-items: center
+      margin-left: 2.9rem
+    &__col-30
+      flex-basis: 100%
+      margin-bottom: 11rem
+    &__desktopimg
+      display: none
+    &__mobiimg
+      display: block
+      max-width: 305px
+    &__card
+      max-width: 100%
+    &__control
+      &__text
+        display: none
+  .footer
+    &__wrap
+      margin-top: -15.4rem
+      
+
 @media screen and ( max-width: 790px )
   .section
     &-title
@@ -149,7 +177,10 @@
   .mobi
     display: inline-block
   
-  .projects    
+  .projects
+    background: $dark  
+    &__heading
+      color: $light  
     .container
       width: 93%
       .projects
@@ -185,6 +216,7 @@
           margin-top: 1.4rem
           font-size: 1.25rem 
           line-height: 1.35
+          color: $light
         &__title
           &__1
             margin-top: -0.09rem
@@ -271,7 +303,7 @@
       &__3
         padding: 0.95rem 2.3rem
         bottom: -0.68rem
-  .header
+  .header, .footer
     padding: 21.5px 0
     .contacts
       &__phone
@@ -313,6 +345,30 @@
       &-title
         margin-left: -0.5rem
         margin-bottom: 3.3rem
+  .footer
+    background: $dark
+    &__wrap
+      padding: 0
+      background: $dark
+    &__title
+      font-size: 1.675rem
+      margin-bottom: 5rem
+    &__input
+      &::placeholder
+        // font-size: 1.5rem
+      &-group
+        flex-basis: 100%
+        margin-bottom: 5.5rem
+        &--full--width
+          margin-bottom: 0.6rem
+    &__button
+      width: 100%
+      font-size: 1.33rem
+  .policy
+    &__label
+      font-size: 1.34rem
+      &--center
+        justify-content: flex-start
 
 
 @media screen and ( max-width: 400px )
@@ -362,3 +418,28 @@
     &-slide
       &__text
         margin-right: 0.5rem
+  .team
+    &__col-30
+      margin-bottom: 11.1rem
+      &:last-child
+        // margin-bottom: 11rem
+    &__desctext
+      font-size: 1.25rem
+      margin-bottom: 7rem
+    .card
+      &__title
+        font-size: 1.485rem
+        margin-top: 0.15rem
+      &__text
+        margin-top: -6.8rem
+        margin-left: auto
+        margin-right: 3.3rem
+        max-width: 19.3rem
+      &__list
+        font-size: 1.485rem
+        margin-bottom: 1.5rem
+      &__pricetag
+        width: 100%
+        padding: 1.225rem 3.1rem
+        font-size: 1.07rem
+  

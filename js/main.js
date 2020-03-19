@@ -28,7 +28,8 @@
 $(document).ready(function () {
   var modal = $('.modal'),
       modalBtn = $('[data-toggle=modal]'),
-      closeBtn = $('.modal__close');
+      closeBtn = $('.modal__close'),
+      erro = $('.invalid');
 
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible');
@@ -46,12 +47,14 @@ $(document).ready(function () {
   
   $('.modal').click(function (e) {
     modal.removeClass('modal--visible');
- });
+    });
   $(".modal__dialog").click(function(e){
     e.stopPropagation();
-  });
 
   
+  });
+
+
 
 
   var mySwiper = new Swiper ('.s1', {
@@ -101,10 +104,57 @@ $(document).ready(function () {
   new WOW().init();
 
 
+ // Валидация формы
+
+
+
+ $('.modal__form').validate({
+  errorClass: "invalid",
+  // focusCleanup: true,
+  rules: {
+    // строчное правило
+    userName: {required: true, minlength: 2, maxlength: 15},
+    userPhone: "required",
+    // правило-объект
+    userEmail: {
+      required: true,
+      email: true
+    }
+  }, /* сообщения */
+  errorElement: "em",
+  messages: {
+    userName: {
+    required: "Заполните поле",
+    minlength: "Имя не короче двух букв",
+    maxlength: "Имя не длиннее 15 букв"
+    },
+    userPhone: "Заполните поле",
+    userEmail: {
+      required: "Обязательно укажите email",
+      email: "Введите корректный email"
+    }
+  }
+  
+  
+ });
+
  
 
-  
+
+
+//  Маска для номера телефона
+
+$('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7(___) ___-__-__"} );
+
+
+
+
+
 });
+
+
+
+
 
 var $window = $(window);
 var $elem = $(".control__text");
@@ -126,9 +176,6 @@ $(document).on("scroll", function () {
 
 
 
-
-
-
 jQuery(document).ready(function() {
 var btn = $('#button');
 
@@ -147,3 +194,38 @@ var btn = $('#button');
   });
 
 
+  var validator = $( ".modal__form" ).close();
+  validator.resetForm();
+
+
+
+
+  
+// $(document).ready(function () {
+//   var modal = $('.modal'),
+//       modalBtn = $('[data-toggle=modal]'),
+//       closeBtn = $('.modal__close');
+
+//   modalBtn.on('click', function () {
+//     modal.toggleClass('modal--visible');
+//   });
+//   closeBtn.on('click', function () {
+//     modal.toggleClass('modal--visible');
+//   });
+
+//    jQuery(document).keyup(function(ev){
+//     if (ev.keyCode == 27) {
+//       modal.removeClass('modal--visible');
+//     }
+    
+//   });
+
+  
+//   $('.modal').click(function (e) {
+//     modal.removeClass('modal--visible');
+//     });
+//   $(".modal__dialog").click(function(e){
+//     e.stopPropagation();
+
+  
+//   });
