@@ -595,7 +595,7 @@ img {
   position: relative;
 }
 
-em.invalid {
+.modal em.invalid {
   position: absolute;
   border-bottom: none;
   color: tomato;
@@ -604,6 +604,46 @@ em.invalid {
 }
 
 .invalid {
+  border-bottom: 1px solid red;
+}
+
+.footer__input {
+  outline: none;
+}
+
+.footer__input-group {
+  position: relative;
+}
+
+.footer em.invalid {
+  position: absolute;
+  border-bottom: none;
+  color: tomato;
+  bottom: -1.3rem;
+  left: 0;
+}
+
+.footer .invalid {
+  border-bottom: 1px solid red;
+}
+
+.control__input {
+  outline: none;
+}
+
+.control__input__group {
+  position: relative;
+}
+
+.control em.invalid {
+  position: absolute;
+  border-bottom: none;
+  color: tomato;
+  bottom: -1.3rem;
+  left: 0;
+}
+
+.control .invalid {
   border-bottom: 1px solid red;
 }
 

@@ -110,11 +110,11 @@ $(document).ready(function () {
 
  $('.modal__form').validate({
   errorClass: "invalid",
-  // focusCleanup: true,
+    // focusCleanup: true,
   rules: {
     // строчное правило
     userName: {required: true, minlength: 2, maxlength: 15},
-    userPhone: {required: true, minlength: 11},
+    userPhone: {required: true, minlength: 17},
     // правило-объект
     userEmail: {
       required: true,
@@ -141,12 +141,66 @@ $(document).ready(function () {
  });
 
  
-//  userPhone: "required",
+  $('.footer__form').validate({
+   errorClass: "invalid",
+     // focusCleanup: true,
+   rules: {
+     // строчное правило
+     userName: {required: true, minlength: 2, maxlength: 15},
+     userPhone: {required: true, minlength: 17},
+     userQuestion: {required: true, minlength: 15}
+   }, /* сообщения */
+   errorElement: "em",
+   messages: {
+     userName: {
+     required: "Заполните поле",
+     minlength: "Имя не короче двух букв",
+     maxlength: "Имя не длиннее 15 букв"
+     },
+     userPhone: {
+     required: "Заполните поле",
+     minlength: "Длина номера 11 цифр"},
+     userQuestion:{
+       required: "Задайте свой вопрос",
+       minlength: "Вопрос не может быть короче 15 символов"
+     }
+    }
+   
+});
+
+
+$('.control__form').validate({
+  errorClass: "invalid",
+    // focusCleanup: true,
+  rules: {
+    // строчное правило
+    userName: {required: true, minlength: 2, maxlength: 15},
+    userPhone: {required: true, minlength: 17}
+  }, /* сообщения */
+  errorElement: "em",
+  messages: {
+    userName: {
+    required: "Заполните поле",
+    minlength: "Имя не короче двух букв",
+    maxlength: "Имя не длиннее 15 букв"
+    },
+    userPhone: {
+    required: "Заполните поле",
+    minlength: "Длина номера 11 цифр"},
+    
+   }
+  
+});
+
+
+
+
+
 
 
 //  Маска для номера телефона
 
-$('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7(___) ___-__-__"} );
+$('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "Ваш номер телефона"} );
 
 
 
@@ -196,38 +250,37 @@ var btn = $('#button');
   });
 
 
-  var validator = $( ".modal__form" ).close();
-  validator.resetForm();
 
-
-
-
-  
-// $(document).ready(function () {
-//   var modal = $('.modal'),
-//       modalBtn = $('[data-toggle=modal]'),
-//       closeBtn = $('.modal__close');
-
-//   modalBtn.on('click', function () {
-//     modal.toggleClass('modal--visible');
-//   });
-//   closeBtn.on('click', function () {
-//     modal.toggleClass('modal--visible');
-//   });
-
-//    jQuery(document).keyup(function(ev){
-//     if (ev.keyCode == 27) {
-//       modal.removeClass('modal--visible');
-//     }
+  // jQuery(document).ready(function() {
+  // $('.control__form').validate({
+  //   errorClass: "invalid",
+  //     // focusCleanup: true,
+  //   rules: {
+  //     // строчное правило
+  //     userName: {required: true, minlength: 2, maxlength: 15},
+  //     userPhone: {required: true, minlength: 17},
+  //     // правило-объект
+  //     userEmail: {
+  //       required: true,
+  //       email: true
+  //     }
+  //   }, /* сообщения */
+  //   errorElement: "em",
+  //   messages: {
+  //     userName: {
+  //     required: "Заполните поле",
+  //     minlength: "Имя не короче двух букв",
+  //     maxlength: "Имя не длиннее 15 букв"
+  //     },
+  //     userPhone: {
+  //     required: "Заполните поле",
+  //     minlength: "Длина номера 11 цифр"},
+  //     userEmail: {
+  //       required: "Обязательно укажите email",
+  //       email: "Введите корректный email"
+  //     }
+  //   }
     
-//   });
-
-  
-//   $('.modal').click(function (e) {
-//     modal.removeClass('modal--visible');
-//     });
-//   $(".modal__dialog").click(function(e){
-//     e.stopPropagation();
-
-  
-//   });
+    
+  //  });
+  // });
