@@ -1501,7 +1501,9 @@ img {
     margin-bottom: 5.65rem; }
   .team__card__text {
     margin-left: auto;
-    margin-right: auto; } }
+    margin-right: auto; }
+  #button {
+    display: none; } }
 
 @media screen and (max-height: 593px) {
   .hero__scrolldown {
@@ -1734,9 +1736,7 @@ img {
   .team .card__pricetag {
     width: 100%;
     padding: 1.225rem 3.1rem;
-    font-size: 1.07rem; }
-  #button {
-    display: none; } }
+    font-size: 1.07rem; } }
 
 @media screen and (max-width: 374px) {
   .control__video {
