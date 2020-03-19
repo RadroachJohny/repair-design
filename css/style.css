@@ -1318,7 +1318,7 @@ img {
   .footer__menu {
     background-color: #131313; }
   .footer .policy__label {
-    color: rgba(255, 255, 255, 0.5); }
+    color: #ffffff; }
   .footer {
     width: 100%; }
     .footer .menu {
@@ -1449,7 +1449,7 @@ img {
     .control__button {
       align-self: stretch;
       position: absolute;
-      bottom: -4.3rem;
+      bottom: -2.2rem;
       left: 0;
       right: 0;
       margin-left: auto;
@@ -1678,7 +1678,9 @@ img {
     .policy__label--center {
       justify-content: flex-start; }
   .team .card__text {
-    max-width: 16.64rem; } }
+    max-width: auto; }
+  .control .control__button {
+    bottom: -4.2rem; } }
 
 @media screen and (max-width: 400px) {
   .hero__content {
@@ -1732,13 +1734,16 @@ img {
   .team .card__pricetag {
     width: 100%;
     padding: 1.225rem 3.1rem;
-    font-size: 1.07rem; } }
+    font-size: 1.07rem; }
+  #button {
+    display: none; } }
 
 @media screen and (max-width: 374px) {
   .control__video {
     width: 100%; }
   .control__button {
-    max-width: 100%; }
+    padding: 1.514rem 0;
+    width: 90%; }
   .team__mobiimg {
     width: 100%; }
   .team .card__title {

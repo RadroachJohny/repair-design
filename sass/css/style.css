@@ -1903,7 +1903,7 @@ img {
 }
 
 .footer .policy__label {
-  color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
 }
 
 .footer {
@@ -2105,7 +2105,7 @@ img {
         -ms-grid-row-align: stretch;
         align-self: stretch;
     position: absolute;
-    bottom: -4.3rem;
+    bottom: -2.2rem;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -2435,7 +2435,10 @@ img {
             justify-content: flex-start;
   }
   .team .card__text {
-    max-width: 16.64rem;
+    max-width: auto;
+  }
+  .control .control__button {
+    bottom: -4.2rem;
   }
 }
 
@@ -2515,6 +2518,9 @@ img {
     padding: 1.225rem 3.1rem;
     font-size: 1.07rem;
   }
+  #button {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 374px) {
@@ -2522,7 +2528,8 @@ img {
     width: 100%;
   }
   .control__button {
-    max-width: 100%;
+    padding: 1.514rem 0;
+    width: 90%;
   }
   .team__mobiimg {
     width: 100%;
