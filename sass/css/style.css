@@ -587,6 +587,10 @@ img {
           justify-content: center;
 }
 
+.modal__policy {
+  position: relative;
+}
+
 .modal__input {
   outline: none;
 }
@@ -623,6 +627,61 @@ img {
   border-bottom: 1px solid red;
 }
 
+#policymodalCheckbox-error {
+  bottom: -1.5rem;
+}
+
+.control__policy {
+  position: relative;
+}
+
+.control__input {
+  outline: none;
+}
+
+.control__input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.control__input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.control__input::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.control__input::placeholder {
+  color: #ffffff;
+}
+
+.control__input-group {
+  position: relative;
+}
+
+.control div.invalid {
+  position: absolute;
+  border-bottom: none;
+  color: tomato;
+  bottom: -1.5rem;
+  text-align: center;
+}
+
+.control .invalid {
+  border-bottom: 1px solid red;
+}
+
+.control #policycontrolCheckbox-error {
+  font-size: 1rem;
+  right: 0;
+  left: -0.3rem;
+  bottom: -1.6rem;
+}
+
+.footer__policy {
+  position: relative;
+}
+
 .footer__input {
   outline: none;
 }
@@ -652,11 +711,14 @@ img {
   border-bottom: none;
   color: tomato;
   bottom: -1.3rem;
-  left: 0;
 }
 
 .footer .invalid {
   border-bottom: 1px solid red;
+}
+
+.footer #policyfootCheckbox-error {
+  font-size: 1rem;
 }
 
 .control__input {
@@ -682,14 +744,6 @@ img {
 
 .control__input__group {
   position: relative;
-}
-
-.control div.invalid {
-  position: absolute;
-  border-bottom: none;
-  color: tomato;
-  bottom: -1.3rem;
-  left: 0;
 }
 
 .control .invalid {
@@ -2121,6 +2175,7 @@ img {
         -ms-grid-row-align: start;
         align-self: start;
     margin-bottom: 5.3rem;
+    width: 90%;
   }
   .control__policy-label {
     font-size: 1.34rem;
@@ -2136,6 +2191,9 @@ img {
   .control__video.img {
     width: 67px;
     height: 7px;
+  }
+  .control #policycontrolCheckbox-error {
+    left: -3.3rem;
   }
   .section-title__text {
     max-width: 30rem;
@@ -2193,6 +2251,9 @@ img {
   }
   #button {
     display: none;
+  }
+  #policymodalCheckbox-error {
+    bottom: -1.5rem;
   }
 }
 
@@ -2443,6 +2504,9 @@ img {
   .control .control__button {
     bottom: -4.2rem;
   }
+  #policymodalCheckbox-error {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -2530,6 +2594,9 @@ img {
   .control__button {
     padding: 1.514rem 0;
     width: 90%;
+  }
+  .control__policy {
+    width: 100%;
   }
   .team__mobiimg {
     width: 100%;

@@ -109,6 +109,16 @@ $(document).ready(function () {
 
 
  $('.modal__form').validate({
+
+
+  errorPlacement: function (error, element) {
+    if (element.attr("type") == "checkbox") {
+        return element.next('label').append(error);
+    }
+
+     error.insertAfter($(element));
+  },
+
   errorClass: "invalid",
     // focusCleanup: true,
   rules: {
@@ -119,7 +129,8 @@ $(document).ready(function () {
     userEmail: {
       required: true,
       email: true
-    }
+    },
+    policymodalCheckbox: {required: true}
   }, /* сообщения */
   errorElement: "div",
   messages: {
@@ -134,38 +145,111 @@ $(document).ready(function () {
     userEmail: {
       required: "Обязательно укажите email",
       email: "Введите корректный email"
-    }
+    },
+    policymodalCheckbox: "Вы должны согласиться на обработку данных"
   }
   
+ 
   
  });
 
+
+
+
  
   $('.footer__form').validate({
+
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
+      }
+  
+       error.insertAfter($(element));
+  },
+
+
    errorClass: "invalid",
      // focusCleanup: true,
    rules: {
      // строчное правило
      userName: {required: true, minlength: 2, maxlength: 15},
-     userPhone: {required: true, minlength: 17}
+     userPhone: {required: true, minlength: 17},
+     policyfootCheckbox: {required: true}
    }, /* сообщения */
    errorElement: "div",
    messages: {
-     userName: {
-     required: "Заполните поле",
-     minlength: "Имя не короче двух букв",
-     maxlength: "Имя не длиннее 15 букв"
-     },
-     userPhone: {
-     required: "Заполните поле",
-     minlength: "Длина номера 11 цифр"},
-     
+    userName: {
+    required: "Заполните поле",
+    minlength: "Имя не короче двух букв",
+    maxlength: "Имя не длиннее 15 букв"
+    },
+    userPhone: {
+    required: "Заполните поле",
+    minlength: "Длина номера 11 цифр"},
+    userEmail: {
+      required: "Обязательно укажите email",
+      email: "Введите корректный email"
+    },
+    policyfootCheckbox: "Вы должны согласиться на обработку данных"
+  }
+  
+ 
+  
+ });
+
+ $('.control__form').validate({
+
+  errorPlacement: function (error, element) {
+    if (element.attr("type") == "checkbox") {
+        return element.next('label').append(error);
     }
-   
+
+     error.insertAfter($(element));
+},
+
+
+ errorClass: "invalid",
+   // focusCleanup: true,
+ rules: {
+   // строчное правило
+   userName: {required: true, minlength: 2, maxlength: 15},
+   userPhone: {required: true, minlength: 17},
+   policycontrolCheckbox: {required: true}
+ }, /* сообщения */
+ errorElement: "div",
+ messages: {
+  userName: {
+  required: "Заполните поле",
+  minlength: "Имя не короче двух букв",
+  maxlength: "Имя не длиннее 15 букв"
+  },
+  userPhone: {
+  required: "Заполните поле",
+  minlength: "Длина номера 11 цифр"},
+  userEmail: {
+    required: "Обязательно укажите email",
+    email: "Введите корректный email"
+  },
+  policycontrolCheckbox: "Вы должны согласиться на обработку данных"
+}
+
+
+
 });
 
 
+
+
 $('.control__form').validate({
+
+  errorPlacement: function (error, element) {
+    if (element.attr("type") == "checkbox") {
+        return element.next('label').append(error);
+    }
+
+     error.insertAfter($(element));
+},
+
   errorClass: "invalid",
     // focusCleanup: true,
   rules: {
@@ -189,21 +273,12 @@ $('.control__form').validate({
 });
 
 
-
-
-
-
-
 //  Маска для номера телефона
 
 $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "Ваш номер телефона"} );
 
 
-
-
-
 });
-
 
 
 
@@ -244,39 +319,3 @@ var btn = $('#button');
     $('html, body').animate({scrollTop:0}, 800);
     });
   });
-
-
-
-  // jQuery(document).ready(function() {
-  // $('.control__form').validate({
-  //   errorClass: "invalid",
-  //     // focusCleanup: true,
-  //   rules: {
-  //     // строчное правило
-  //     userName: {required: true, minlength: 2, maxlength: 15},
-  //     userPhone: {required: true, minlength: 17},
-  //     // правило-объект
-  //     userEmail: {
-  //       required: true,
-  //       email: true
-  //     }
-  //   }, /* сообщения */
-  //   errorElement: "em",
-  //   messages: {
-  //     userName: {
-  //     required: "Заполните поле",
-  //     minlength: "Имя не короче двух букв",
-  //     maxlength: "Имя не длиннее 15 букв"
-  //     },
-  //     userPhone: {
-  //     required: "Заполните поле",
-  //     minlength: "Длина номера 11 цифр"},
-  //     userEmail: {
-  //       required: "Обязательно укажите email",
-  //       email: "Введите корректный email"
-  //     }
-  //   }
-    
-    
-  //  });
-  // });

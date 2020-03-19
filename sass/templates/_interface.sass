@@ -56,6 +56,8 @@
       justify-content: center
 
 .modal
+  &__policy
+    position: relative    
   &__input
     outline: none
     &::placeholder
@@ -70,8 +72,15 @@
     left: 0
 .invalid
   border-bottom: 1px solid red
+#policymodalCheckbox-error
+  bottom: -1.5rem
 
-.footer
+
+.control
+  &__policy
+    position: relative
+    &-label
+      // position: relative
   &__input
     outline: none
     &::placeholder
@@ -82,10 +91,36 @@
     position: absolute
     border-bottom: none
     color: tomato
-    bottom: -1.3rem
-    left: 0
+    bottom: -1.5rem
+    text-align: center    
   .invalid
     border-bottom: 1px solid red
+  #policycontrolCheckbox-error
+   font-size: 1rem
+   right: 0
+   left: -0.3rem
+   bottom: -1.6rem
+
+.footer
+  &__policy
+    position: relative
+  &__input
+    outline: none
+    &::placeholder
+      color: #ffffff
+    &-group
+      position: relative
+  div.invalid
+    position: absolute
+    border-bottom: none
+    color: tomato
+    bottom: -1.3rem    
+  .invalid
+    border-bottom: 1px solid red
+  #policyfootCheckbox-error
+   font-size: 1rem
+
+
 
 .control
   &__input
@@ -94,12 +129,6 @@
     &::placeholder
       color: #ffffff
     &__group
-      position: relative
-  div.invalid
-    position: absolute
-    border-bottom: none
-    color: tomato
-    bottom: -1.3rem
-    left: 0
+      position: relative 
   .invalid
     border-bottom: 1px solid red
