@@ -1479,6 +1479,13 @@ img {
   .footer .map__wrapper {
     max-width: 66rem;
     margin: auto; }
+  .footer__span-phone {
+    display: inline-block;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    color: #E3B873;
+    text-decoration: none; }
 
 @media screen and (max-width: 1290px) {
   html {
@@ -1496,11 +1503,17 @@ img {
 
 @media screen and (max-width: 1035px) {
   .nav {
-    display: none; }
+    font-size: 0.9rem; }
   .hero__instagram {
     display: none; }
   .hero__content {
     margin-left: 0; } }
+
+@media screen and (max-width: 991px) {
+  .nav {
+    display: none; }
+  .clients {
+    display: none; } }
 
 @media screen and (max-width: 960px) {
   .section-title__text {
@@ -1527,10 +1540,6 @@ img {
       display: none; }
   .footer__wrap {
     margin-top: -15.4rem; } }
-
-@media screen and (max-width: 820px) {
-  .clients {
-    display: none; } }
 
 @media screen and (max-width: 790px) {
   .section-title__text {
@@ -1883,7 +1892,12 @@ img {
   .team .card__pricetag {
     width: 100%;
     padding: 1.225rem 3.1rem;
-    font-size: 1.07rem; } }
+    font-size: 1.07rem; }
+  .footer__mobile {
+    display: flex;
+    flex-direction: column; }
+  .map__wrapper {
+    order: -1; } }
 
 @media screen and (max-width: 374px) {
   .control__video {
