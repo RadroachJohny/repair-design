@@ -1917,4 +1917,6 @@ img {
   .team .card__list {
     font-size: 1.285rem; }
   .team .card__pricetag {
-    font-size: 0.87rem; } }
+    font-size: 0.87rem; }
+  .footer__menu .menu {
+    display: none; } }

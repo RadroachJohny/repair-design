@@ -2803,5 +2803,8 @@ img {
   .team .card__pricetag {
     font-size: 0.87rem;
   }
+  .footer__menu .menu {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
