@@ -892,6 +892,22 @@ img {
   color: #131313;
 }
 
+.control__input::-webkit-input-placeholder {
+  color: #131313;
+}
+
+.control__input:-ms-input-placeholder {
+  color: #131313;
+}
+
+.control__input::-ms-input-placeholder {
+  color: #131313;
+}
+
+.control__input::placeholder {
+  color: #131313;
+}
+
 .control__input:focus {
   outline: none;
 }
@@ -2133,8 +2149,10 @@ img {
 }
 
 .footer__map {
-  margin-bottom: 4.8rem;
+  padding-bottom: 4.8rem;
   min-height: 465px;
+  max-width: 66rem;
+  margin: auto;
 }
 
 .footer .map__heading {
@@ -2156,11 +2174,6 @@ img {
 
 .footer .map .title__icon {
   margin-right: 0.6rem;
-}
-
-.footer .map__wrapper {
-  max-width: 66rem;
-  margin: auto;
 }
 
 .footer__span-phone {
@@ -2805,6 +2818,12 @@ img {
   }
   .footer__menu .menu {
     display: none;
+  }
+  .footer__map {
+    width: 100%;
+  }
+  .ymaps-2-1-76-map {
+    width: 100% !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

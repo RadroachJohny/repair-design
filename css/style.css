@@ -671,6 +671,16 @@ img {
       font-weight: normal; }
   .control__input {
     color: #131313; }
+    .control__input::-webkit-input-placeholder {
+      color: #131313; }
+    .control__input::-moz-placeholder {
+      color: #131313; }
+    .control__input:-ms-input-placeholder {
+      color: #131313; }
+    .control__input::-ms-input-placeholder {
+      color: #131313; }
+    .control__input::placeholder {
+      color: #131313; }
     .control__input:focus {
       outline: none; }
   .control__input__group {
@@ -1459,8 +1469,10 @@ img {
   .footer .contacts__phone {
     margin-right: 45px; }
   .footer__map {
-    margin-bottom: 4.8rem;
-    min-height: 465px; }
+    padding-bottom: 4.8rem;
+    min-height: 465px;
+    max-width: 66rem;
+    margin: auto; }
   .footer .map__heading {
     margin: auto;
     margin-bottom: 2.8rem;
@@ -1476,9 +1488,6 @@ img {
     color: #E3B873; }
   .footer .map .title__icon {
     margin-right: 0.6rem; }
-  .footer .map__wrapper {
-    max-width: 66rem;
-    margin: auto; }
   .footer__span-phone {
     display: inline-block;
     width: -webkit-max-content;
@@ -1919,4 +1928,8 @@ img {
   .team .card__pricetag {
     font-size: 0.87rem; }
   .footer__menu .menu {
-    display: none; } }
+    display: none; }
+  .footer__map {
+    width: 100%; }
+  .ymaps-2-1-76-map {
+    width: 100% !important; } }
