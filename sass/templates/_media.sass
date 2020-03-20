@@ -502,7 +502,7 @@
       order: -1
   
   
-@media screen and ( max-width: 374px )
+@media screen and ( max-width: 375px )
   .control
     &__video
       width: 100%
@@ -529,7 +529,25 @@
         display: none
   .footer__map
     width: 100%
-  .ymaps-2-1-76-map
-    width: 100% !important
+    min-height: 312px   
+    // padding-bottom: 0
+  .map__wrapper
+    margin-top: -1.9rem
+    min-height: 100px
+  .footer  
+    .map
+      &__heading
+        max-width: 27rem        
+      &__title
+        margin-top: -1.5rem
+        margin-bottom: 1.9rem
+        font-size: 1.49rem
+       
+  .title
+    &__icon
+      img
+        width: 41px
+        &:last-of-type
+          margin-left: 0.7rem
 
 
