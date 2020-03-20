@@ -1314,7 +1314,7 @@ img {
     background: #181818;
     max-width: 63.07rem;
     margin: auto;
-    margin-bottom: 3.714rem;
+    margin-bottom: 3.414rem;
     padding: 2.5rem; }
   .footer__title {
     font-family: "Yeseva One", cursive;
@@ -1383,6 +1383,27 @@ img {
       color: #E3B873; }
   .footer .contacts__phone {
     margin-right: 45px; }
+  .footer__map {
+    margin-bottom: 4.8rem;
+    min-height: 465px; }
+  .footer .map__heading {
+    margin: auto;
+    margin-bottom: 2.8rem;
+    max-width: 39rem;
+    text-align: center; }
+  .footer .map__title {
+    margin-bottom: 1.6rem;
+    font-family: "Yeseva One", cursive;
+    font-size: 1.428rem;
+    line-height: 2rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #E3B873; }
+  .footer .map .title__icon {
+    margin-right: 0.6rem; }
+  .footer .map__wrapper {
+    max-width: 66rem;
+    margin: auto; }
 
 @media screen and (max-width: 1290px) {
   html {
