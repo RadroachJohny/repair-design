@@ -16,7 +16,9 @@
   .swiper
     &-slide
       &__text
-        margin-right: 0.5rem
+        // margin-right: 0.5rem
+        &__wrapper
+          width: 100%
 
 @media screen and ( max-width: 1035px )
   .nav
@@ -36,10 +38,30 @@
     display: none
 
 @media screen and ( max-width: 960px )
+  .projects
+    &__card
+      &__3
+        margin-bottom: 18rem     
+    .row
+      flex-direction: column
+      .col-30
+        width: 100% 
+        margin: auto
+          
+    .mobile
+      &__visible
+        display: inline-block
+      &__hidden
+        display: none
+  .goals
+    display: none
   .section
     &-title
       &__text
         max-width: 25rem
+  .projects    
+      .col-30
+        display: flex
   .team
     background: $dark
     .row
@@ -64,6 +86,27 @@
   .footer
     &__wrap
       margin-top: -15.4rem
+  .row
+    flex-direction: column
+    align-items: center
+    .card
+      margin: auto
+    .projects
+      &__card
+        &__3
+          margin-bottom: 18rem 
+  .projects
+    .col-50
+      width: 100% 
+    .col-image
+      margin-top: 3rem
+    &__row
+      flex-direction: column
+    .mobile
+      &__visible
+        display: inline-block
+      &__hidden
+        display: none
       
 
 
@@ -157,22 +200,23 @@
     &-text
       margin-top: 2.35rem
       padding-bottom: 3.14rem
-  .row
-    flex-direction: column
-    align-items: center
-    .card
-      &__text
-        margin-left: 0
-    .team
-      &__card
+  .team
+    .row
+      flex-direction: column
+      align-items: center
+      .card
         &__text
-          margin-left: auto
-          margin-right: auto
+          margin-left: 0
+      .team
+        &__card
+          &__text
+            margin-left: auto
+            margin-right: auto
   .section
     &-title
       &__word
         &::after
-          display: none
+          display: none  
   .projects
     .col-50
       width: 100% 
@@ -214,6 +258,11 @@
     display: none
   .mobi
     display: inline-block
+
+
+    .projects    
+      .col-30
+        display: flex
   
   .projects
     background: $dark  
@@ -222,20 +271,10 @@
     .container
       width: 93%
       .projects
-        &__card
-          margin-left: 0.3rem
-          margin-right: 0.2rem
-          &__1
-            margin-bottom: 2.85rem
-            margin-right: 0.3rem
-            margin-left: 0.4rem
-          &__2
-            margin-right: 0.3rem
-            margin-bottom: 2.85rem
-            margin-left: 0.4rem
-          &__3
-            margin-right: 0.3rem
-            margin-left: 0.4rem
+        .col-30
+          .card
+            margin: auto
+              
         &__pricetag
           padding: 1.014rem 3.85rem 1.014rem 3.85rem
           &__1

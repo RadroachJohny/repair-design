@@ -58,7 +58,10 @@ $(document).ready(function () {
 
 
   var mySwiper = new Swiper ('.s1', {
+    spaceBetween: 2,
     loop: true,
+    slidesPerView: 1,
+    slidesPerColumn: 1,
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
@@ -80,7 +83,8 @@ $(document).ready(function () {
  
 
   var yourSwiper = new Swiper ('.s2', {
-   
+    spaceBetween: 2,
+    slidesPerView: 1,
     loop: true,
     pagination: {
       el: '.sp',
