@@ -309,14 +309,14 @@ template {
   src: url("../../fonts/futura/FuturaBookC.woff") format("woff"), url("../../fonts/futura/FuturaBookC.woff2") format("woff");
   font-weight: normal;
   font-style: normal;
-  font-display: wrap; }
+  font-display: swap; }
 
 @font-face {
   font-family: 'Futura Demi';
   src: url("../../fonts/futura/FuturaDemiC.woff") format("woff"), url("../../fonts/futura/FuturaDemiC.woff2") format("woff");
   font-weight: normal;
   font-style: normal;
-  font-display: wrap; }
+  font-display: swap; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -588,10 +588,10 @@ img {
   opacity: 0;
   visibility: hidden;
   z-index: 1000; }
-  #button::hover {
+  #button:hover {
     cursor: pointer;
     background-color: #333333; }
-  #button::active {
+  #button:active {
     background-color: #555; }
   #button::after {
     content: "\f077";
@@ -644,9 +644,7 @@ img {
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
       -webkit-animation: fly-in 1000ms linear;
-      animation: fly-in 1000ms linear;
-      -webkit-animation-delay: 0;
-      animation-delay: 0; }
+      animation: fly-in 1000ms linear; }
     .control__text::before {
       content: "";
       display: block;
@@ -1866,8 +1864,6 @@ img {
     font-size: 1.34rem; }
     .policy__label--center {
       justify-content: flex-start; }
-  .team .card__text {
-    max-width: auto; }
   .control .control__button {
     bottom: -4.2rem; }
   #policymodalCheckbox-error {

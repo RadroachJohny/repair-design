@@ -346,7 +346,7 @@ template {
   src: url("../../fonts/futura/FuturaBookC.woff") format("woff"), url("../../fonts/futura/FuturaBookC.woff2") format("woff");
   font-weight: normal;
   font-style: normal;
-  font-display: wrap;
+  font-display: swap;
 }
 
 @font-face {
@@ -354,7 +354,7 @@ template {
   src: url("../../fonts/futura/FuturaDemiC.woff") format("woff"), url("../../fonts/futura/FuturaDemiC.woff2") format("woff");
   font-weight: normal;
   font-style: normal;
-  font-display: wrap;
+  font-display: swap;
 }
 
 *, *:before, *:after {
@@ -768,12 +768,12 @@ img {
   z-index: 1000;
 }
 
-#button::hover {
+#button:hover {
   cursor: pointer;
   background-color: #333333;
 }
 
-#button::active {
+#button:active {
   background-color: #555;
 }
 
@@ -846,8 +846,6 @@ img {
           animation-fill-mode: forwards;
   -webkit-animation: fly-in 1000ms linear;
           animation: fly-in 1000ms linear;
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
 }
 
 .control__text::before {
@@ -2737,9 +2735,6 @@ img {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-  }
-  .team .card__text {
-    max-width: auto;
   }
   .control .control__button {
     bottom: -4.2rem;
