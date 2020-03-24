@@ -7,6 +7,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const minify = require('gulp-minify');
 const htmlmin = require('gulp-htmlmin');
 var tinypng = require('gulp-tinypng-compress');
+const uglify = require('gulp-uglify-es').default;
  
 // Static server
 function bs() {
@@ -50,14 +51,12 @@ function buildCSS(done) {
 
 function buildJS(done) {
   src(['js/**.js', '!js/**.min.js'])
-  .pipe(minify({ext:{        
-        min:'.js'
-      }
-  }))
-  .pipe(dest('dist/js/'));
+  .pipe(uglify())
+  .pipe(dest('dist/js/'));  
   src('js/**.min.js').pipe(dest('dist/js/'));
   done();
 }
+
 
 function html(done) {
   src('**.html')
@@ -81,7 +80,7 @@ function fonts(done) {
 }
 
 function imagemin(done) {
-  src('img/**/**')
+  src('img/**/**/*.{png,jpg,jpeg}')
     .pipe(tinypng({ key: 'nX7k8C9d6FxQGhJPrfFwLJ4N0SjTmrr7',}))
     .pipe(dest('dist/img/'));
   src('img/**/*.svg')
@@ -105,4 +104,13 @@ exports.build = series(buildCSS, buildJS, html, php, fonts, imagemin);
 // });
 
 
-// src('img/**/**')
+// function buildJS(done) {
+//   src(['js/**.js', '!js/**.min.js'])
+//   .pipe(minify({ext:{        
+//         min:'.js'
+//       }
+//   }))
+//   .pipe(dest('dist/js/'));
+//   src('js/**.min.js').pipe(dest('dist/js/'));
+//   done();
+// }

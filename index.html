@@ -8,10 +8,10 @@
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="sass/css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="sass/css/animate.css">
   <link rel="stylesheet" href="sass/css/style.css">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=aee9f8ba-a8fa-4a92-8189-2174af549949&lang=ru_RU"
-    ></script>
+
 </head>
 
 <body>
@@ -227,8 +227,9 @@
           <!-- /.section-title__image -->
         </div>
         <!-- /.section-title -->
-        <div class="control__video video">
-          <img src="img/play.svg" alt="play icon" class="video__play">
+        <div class="control__video video" id="player">
+          <a data-fancybox href="https://www.youtube.com/watch?v=b6mIoQ84Mks" class="video__play"><img src="img/play.svg" alt="play icon" ></a>
+          
         </div>
         <!-- /.control__video video -->
         <p class="control__text ">
@@ -509,213 +510,223 @@
           <div class="col-50 goals__col__image">
             <div class="slider__links">
 
-              <div class="slider__name slider__name__active">
-                <span class="name__number name__number__active">01</span>
-                <p class="name__description">Выезд на замер помещения</p>
+              <div class="link-row">
+
+                <div class="slider__name slider__name__active ">
+                  <span class="name__number name__number__active swiper-pagination swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span>
+                  <!-- <p class="name__description">Выезд на замер помещения</p> -->
+                </div>
+
+                <div class="slider__name">
+                  <span class="name__number">02</span>
+                  <p class="name__description mincont">Составление сметы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                </div>
+
+                <div class="slider__name">
+                  <span class="name__number">03</span>
+                  <p class="name__description">Разработка дизайн макета</p>
+                </div>
+
               </div>
 
-              <div class="slider__name">
-                <span class="name__number">02</span>
-                <p class="name__description">Составление сметы</p>
+              <div class="link-row">
+
+                <div class="slider__name">
+                  <span class="name__number">04</span>
+                  <p class="name__description">Закупка расходных материалов</p>
+                </div>
+
+                <div class="slider__name">
+                  <span class="name__number">05</span>
+                  <p class="name__description">Ремонтно-отделочные работы</p>
+                </div>
+
+                <div class="slider__name ">
+                  <span class="name__number">06</span>
+                  <p class="name__description">Приёмка-сдача работ</p>
+                </div>
+
               </div>
 
-              <div class="slider__name">
-                <span class="name__number">03</span>
-                <p class="name__description">Разработка дизайн макета</p>
               </div>
 
-              <div class="slider__name">
-                <span class="name__number">04</span>
-                <p class="name__description">Закупка расходных материалов</p>
+              <div class="goals__image">
+                <img src="img/goals/image3.png" alt="">
+
               </div>
-
-              <div class="slider__name">
-                <span class="name__number">05</span>
-                <p class="name__description">Ремонтно-отделочные работы</p>
-              </div>
-
-              <div class="slider__name ">
-                <span class="name__number">06</span>
-                <p class="name__description">Приёмка-сдача работ</p>
-              </div>
-
-
+              <!-- /.col-50 -->
             </div>
-
-            <div class="goals__image">
-              <img src="img/goals/image3.png" alt="">
-
-            </div>
-            <!-- /.col-50 -->
+            <!-- /.row goals__row -->
           </div>
-          <!-- /.row goals__row -->
+          <!-- /.container -->
         </div>
-        <!-- /.container -->
+        <!-- /.section goals -->
       </div>
-      <!-- /.section goals -->
-    </div>
 
-    <div class="section team">
-      <div class="container">
-        <div class="section-title projects__section-title">
-          <h2 class="section-title__heading wow fadeInDown team__heading">Наша команда</h2>
-          <!-- /.section-title__heading -->
-          <div class="section-title__image">
-            <img src="img/team.svg" alt="команда">
-          </div>
-          <!-- /.section-title__image -->
-        </div>
-        <!-- /.section-title -->
-        <div class="description team__description">
-          <p class="description__text team__desctext">Наша команда помогла стать счастливее более чем 500 семьям, и мы
-            не собираемся останавливаться</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-30 wow slideInUp team__col-30">
-            <div class="card team__card team__card__1">
-              <img class="team__desktopimg" src="img/team/team_1.jpg" alt="Алексей">
-              <img class="team__mobiimg" src="img/team/team_1_mobile.jpg" alt="Алексей">
-              <div class="card__text team__card__text">
-                <h3 class="card__title team__card__title">Алексей Колмаков</h3>
-                <p class="card__list team__card__list">Проектный менеджер</p>
-                <strong class="card__pricetag team__card__pricetag">Опыт работы 8 лет</strong>
-              </div>
+      <div class="section team">
+        <div class="container">
+          <div class="section-title projects__section-title">
+            <h2 class="section-title__heading wow fadeInDown team__heading">Наша команда</h2>
+            <!-- /.section-title__heading -->
+            <div class="section-title__image">
+              <img src="img/team.svg" alt="команда">
             </div>
+            <!-- /.section-title__image -->
+          </div>
+          <!-- /.section-title -->
+          <div class="description team__description">
+            <p class="description__text team__desctext">Наша команда помогла стать счастливее более чем 500 семьям, и мы
+              не собираемся останавливаться</p>
           </div>
 
-          <div class="col-30 wow slideInUp team__col-30">
-            <div class="card team__card team__card__2">
-              <img class="team__desktopimg" src="img/team/team_2.jpg" alt="Алиса">
-              <img class="team__mobiimg" src="img/team/team_2_mobile.jpg" alt="Алиса">
-              <div class="card__text team__card__text">
-                <h3 class="card__title team__card__title">Алиса Сухорукова</h3>
-                <p class="card__list team__card__list">Дизайнер</p>
-                <strong class="card__pricetag team__card__pricetag">Опыт работы 6 лет</strong>
-              </div>
-            </div>
-          </div>
+          <div class="row">
 
-          <div class="col-30 wow slideInUp team__col-30">
-            <div class="card team__card team__card__3">
-              <img class="team__desktopimg" src="img/team/team_3.jpg" alt="Давид">
-              <img class="team__mobiimg" src="img/team/team_3_mobile.jpg" alt="Давид">
-              <div class="card__text team__card__text">
-                <h3 class="card__title team__card__title">Давид Волынев</h3>
-                <p class="card__list team__card__list">Бригадир</p>
-                <strong class="card__pricetag team__card__pricetag">Опыт работы 7 лет</strong>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <p class="control__text team__control__text">
-          Каждый сотрудник нашей компании является квалифицированным штатным специалистом с опытом работы от 6 лет. У
-          нас нет гастарбайтеров, каждый сотрудник выполняет работу, соответствующую его специальности.
-        </p>
-        <!-- /.control__text -->
-      </div>
-    </div>
-
-    <div class="section clients">
-      <div class="container">
-
-        <div class="section-title clients__section-title">
-          <h2 class="section-title__heading wow fadeInDown clients__heading">Наши клиенты</h2>
-          <!-- /.section-title__heading -->
-          <div class="section-title__image">
-            <img src="img/clients.svg" alt="Клиенты">
-          </div>
-          <!-- /.section-title__image -->
-        </div>
-        <!-- /.section-title -->
-        <div class="description clients__description">
-          <p class="description__text clients__desctext">80% наших клиентов рекомендуют нас своим знакомым и друзьям</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-30 wow slideInUp clients__col-30">
-            <div class="card clients__card clients__card__1">
-              <div class="clients__card__heading">
-                <img src="img/clients/client_1.jpg" alt="Екатерина">
-                <h3 class="card__title clients__card__title">Савельева Екатерина Львовна</h3>
-              </div>
-              <p class="card__list clients__card__text">Я хочу поблагодарить ребят за их работу. Они вложили душу в
-                ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному
-                менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда
-                мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я
-                рекомендую этих мастеров.</p>
-
-              <div class=" card__pricetag repair-data clients__repair-data">
-                <div class="clients__info flat-size clients__flat-size ">
-                  <span class=" clients__info__svg"><img src="img/clients/flat-size.svg" alt="квадратура"></span>
-                  <span class=" baseline"> 40 M<sup>2</sup></span>
-                </div>
-                <div class="clients__info repair-period clients__repair-period clients__repair__info">
-                  <img class="clients__info__svg" src="img/clients/repair-period.svg" alt="срок ремонта">
-                  <span class="repair__days">48 <span class="days">дней</span></span>
+            <div class="col-30 wow slideInUp team__col-30">
+              <div class="card team__card team__card__1">
+                <img class="team__desktopimg" src="img/team/team_1.jpg" alt="Алексей">
+                <img class="team__mobiimg" src="img/team/team_1_mobile.jpg" alt="Алексей">
+                <div class="card__text team__card__text">
+                  <h3 class="card__title team__card__title">Алексей Колмаков</h3>
+                  <p class="card__list team__card__list">Проектный менеджер</p>
+                  <strong class="card__pricetag team__card__pricetag">Опыт работы 8 лет</strong>
                 </div>
               </div>
             </div>
-          </div>
 
-
-          <div class="col-30 wow slideInUp clients__col-30">
-            <div class="card clients__card clients__card__2">
-              <div class="clients__card__heading">
-                <img src="img/clients/client_2.jpg" alt="Михаил">
-                <h3 class="card__title clients__card__title">Большов Михаил Анатольевич</h3>
-              </div>
-              <p class="card__list clients__card__text">Я хочу поблагодарить ребят за их работу. Они вложили душу в
-                ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному
-                менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда
-                мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое.
-                Я&nbsp;рекомендую этих мастеров.</p>
-
-              <div class=" card__pricetag repair-data clients__repair-data">
-                <div class="clients__info flat-size clients__flat-size ">
-                  <span class=" clients__info__svg"><img src="img/clients/flat-size.svg" alt="квадратура"></span>
-                  <span class=" baseline"> 90 M<sup>2</sup></span>
-                </div>
-                <div class="clients__info repair-period clients__repair-period clients__repair__info">
-                  <img class="clients__info__svg" src="img/clients/repair-period.svg" alt="срок ремонта">
-                  <span class="repair__days">128 <span class="days">дней</span></span>
+            <div class="col-30 wow slideInUp team__col-30">
+              <div class="card team__card team__card__2">
+                <img class="team__desktopimg" src="img/team/team_2.jpg" alt="Алиса">
+                <img class="team__mobiimg" src="img/team/team_2_mobile.jpg" alt="Алиса">
+                <div class="card__text team__card__text">
+                  <h3 class="card__title team__card__title">Алиса Сухорукова</h3>
+                  <p class="card__list team__card__list">Дизайнер</p>
+                  <strong class="card__pricetag team__card__pricetag">Опыт работы 6 лет</strong>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-30 wow slideInUp clients__col-30">
-            <div class="card clients__card clients__card__3">
-              <div class="clients__card__heading">
-                <img src="img/clients/client_3.jpg" alt="Даниил">
-                <h3 class="card__title clients__card__title">Хасанов Даниил Муратович</h3>
-              </div>
-              <p class="card__list clients__card__text">Я хочу поблагодарить ребят за их работу. Они вложили душу в
-                ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному
-                менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось.
-                Команда
-                мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое. Цены
-                демократические. </p>
-
-              <div class=" card__pricetag repair-data clients__repair-data">
-                <div class="clients__info flat-size clients__flat-size ">
-                  <span class=" clients__info__svg"><img src="img/clients/flat-size.svg" alt="квадратура"></span>
-                  <span class=" baseline"> 56 M<sup>2</sup></span>
-                </div>
-                <div class="clients__info repair-period clients__repair-period clients__repair__info">
-                  <img class="clients__info__svg" src="img/clients/repair-period.svg" alt="срок ремонта">
-                  <span class="repair__days">86 <span class="days">дней</span></span>
+            <div class="col-30 wow slideInUp team__col-30">
+              <div class="card team__card team__card__3">
+                <img class="team__desktopimg" src="img/team/team_3.jpg" alt="Давид">
+                <img class="team__mobiimg" src="img/team/team_3_mobile.jpg" alt="Давид">
+                <div class="card__text team__card__text">
+                  <h3 class="card__title team__card__title">Давид Волынев</h3>
+                  <p class="card__list team__card__list">Бригадир</p>
+                  <strong class="card__pricetag team__card__pricetag">Опыт работы 7 лет</strong>
                 </div>
               </div>
             </div>
-          </div>
 
+          </div>
+          <p class="control__text team__control__text">
+            Каждый сотрудник нашей компании является квалифицированным штатным специалистом с опытом работы от 6 лет. У
+            нас нет гастарбайтеров, каждый сотрудник выполняет работу, соответствующую его специальности.
+          </p>
+          <!-- /.control__text -->
         </div>
       </div>
-    </div>
+
+      <div class="section clients">
+        <div class="container">
+
+          <div class="section-title clients__section-title">
+            <h2 class="section-title__heading wow fadeInDown clients__heading">Наши клиенты</h2>
+            <!-- /.section-title__heading -->
+            <div class="section-title__image">
+              <img src="img/clients.svg" alt="Клиенты">
+            </div>
+            <!-- /.section-title__image -->
+          </div>
+          <!-- /.section-title -->
+          <div class="description clients__description">
+            <p class="description__text clients__desctext">80% наших клиентов рекомендуют нас своим знакомым и друзьям
+            </p>
+          </div>
+
+          <div class="row">
+
+            <div class="col-30 wow slideInUp clients__col-30">
+              <div class="card clients__card clients__card__1">
+                <div class="clients__card__heading">
+                  <img src="img/clients/client_1.jpg" alt="Екатерина">
+                  <h3 class="card__title clients__card__title">Савельева Екатерина Львовна</h3>
+                </div>
+                <p class="card__list clients__card__text">Я хочу поблагодарить ребят за их работу. Они вложили душу в
+                  ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному
+                  менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось.
+                  Команда
+                  мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я
+                  рекомендую этих мастеров.</p>
+
+                <div class=" card__pricetag repair-data clients__repair-data">
+                  <div class="clients__info flat-size clients__flat-size ">
+                    <span class=" clients__info__svg"><img src="img/clients/flat-size.svg" alt="квадратура"></span>
+                    <span class=" baseline"> 40 M<sup>2</sup></span>
+                  </div>
+                  <div class="clients__info repair-period clients__repair-period clients__repair__info">
+                    <img class="clients__info__svg" src="img/clients/repair-period.svg" alt="срок ремонта">
+                    <span class="repair__days">48 <span class="days">дней</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-30 wow slideInUp clients__col-30">
+              <div class="card clients__card clients__card__2">
+                <div class="clients__card__heading">
+                  <img src="img/clients/client_2.jpg" alt="Михаил">
+                  <h3 class="card__title clients__card__title">Большов Михаил Анатольевич</h3>
+                </div>
+                <p class="card__list clients__card__text">Я хочу поблагодарить ребят за их работу. Они вложили душу в
+                  ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному
+                  менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось.
+                  Команда
+                  мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое.
+                  Я&nbsp;рекомендую этих мастеров.</p>
+
+                <div class=" card__pricetag repair-data clients__repair-data">
+                  <div class="clients__info flat-size clients__flat-size ">
+                    <span class=" clients__info__svg"><img src="img/clients/flat-size.svg" alt="квадратура"></span>
+                    <span class=" baseline"> 90 M<sup>2</sup></span>
+                  </div>
+                  <div class="clients__info repair-period clients__repair-period clients__repair__info">
+                    <img class="clients__info__svg" src="img/clients/repair-period.svg" alt="срок ремонта">
+                    <span class="repair__days">128 <span class="days">дней</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-30 wow slideInUp clients__col-30">
+              <div class="card clients__card clients__card__3">
+                <div class="clients__card__heading">
+                  <img src="img/clients/client_3.jpg" alt="Даниил">
+                  <h3 class="card__title clients__card__title">Хасанов Даниил Муратович</h3>
+                </div>
+                <p class="card__list clients__card__text">Я хочу поблагодарить ребят за их работу. Они вложили душу в
+                  ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному
+                  менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось.
+                  Команда
+                  мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое. Цены
+                  демократические. </p>
+
+                <div class=" card__pricetag repair-data clients__repair-data">
+                  <div class="clients__info flat-size clients__flat-size ">
+                    <span class=" clients__info__svg"><img src="img/clients/flat-size.svg" alt="квадратура"></span>
+                    <span class=" baseline"> 56 M<sup>2</sup></span>
+                  </div>
+                  <div class="clients__info repair-period clients__repair-period clients__repair__info">
+                    <img class="clients__info__svg" src="img/clients/repair-period.svg" alt="срок ремонта">
+                    <span class="repair__days">86 <span class="days">дней</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
   </main>
 
   <footer class="footer section section--dark">
@@ -772,12 +783,22 @@
         </div>
 
 
-        <div class="map__wrapper">
+        <!-- <div class="map__wrapper">
 
           <div class=" footer__map" id="map">
           </div>
 
+        </div> -->
+       
+
+
+        <div class="ymap-container">
+          <div class="loader loader-default"></div>
+          <div id="map-yandex"></div>
         </div>
+
+
+       
 
       </div>
 
@@ -845,11 +866,13 @@
   <!-- /.modal -->
 
   <a id="button"></a>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=aee9f8ba-a8fa-4a92-8189-2174af549949&lang=ru_RU"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
 
   <script src="js/main.js"></script>
