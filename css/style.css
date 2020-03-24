@@ -1919,8 +1919,9 @@ img {
     font-size: 1.07rem; }
   .footer__mobile {
     display: flex;
-    flex-direction: column; }
-  .map__wrapper {
+    flex-direction: column;
+    flex-wrap: wrap; }
+  .ymap-container {
     order: -1; } }
 
 @media screen and (max-width: 375px) {
@@ -1944,12 +1945,6 @@ img {
     font-size: 0.87rem; }
   .footer__menu .menu {
     display: none; }
-  .footer__map {
-    width: 100%;
-    min-height: 312px; }
-  .map__wrapper {
-    margin-top: -1.9rem;
-    min-height: 100px; }
   .footer .map__heading {
     max-width: 27rem; }
   .footer .map__title {

@@ -2838,8 +2838,10 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-  .map__wrapper {
+  .ymap-container {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
@@ -2875,14 +2877,6 @@ img {
   }
   .footer__menu .menu {
     display: none;
-  }
-  .footer__map {
-    width: 100%;
-    min-height: 312px;
-  }
-  .map__wrapper {
-    margin-top: -1.9rem;
-    min-height: 100px;
   }
   .footer .map__heading {
     max-width: 27rem;

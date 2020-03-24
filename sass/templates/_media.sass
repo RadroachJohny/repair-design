@@ -532,9 +532,10 @@
     &__mobile
       display: flex
       flex-direction: column
-  .map
-    &__wrapper
-      order: -1
+      flex-wrap: wrap
+      
+  .ymap-container
+    order: -1
   
   
 @media screen and ( max-width: 375px )
@@ -562,12 +563,12 @@
   .footer__menu
     & .menu
         display: none
-  .footer__map
-    width: 100%
-    min-height: 312px    
-  .map__wrapper
-    margin-top: -1.9rem
-    min-height: 100px
+  // .footer__map
+  //   width: 100%
+  //   min-height: 312px    
+  // .map__wrapper
+  //   margin-top: -1.9rem
+  //   min-height: 100px
   .footer  
     .map
       &__heading
